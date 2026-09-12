@@ -1,0 +1,13 @@
+Pierwotnie w mojej implementacji strukturą do przechowywania bomb była tablica rozszerzalna 
+(wrzuć nową paczkę na koniec, przy każdej operacji szukaj odpowiedniego identyfikatora ownera)
+
+Po zdalnych konsultacjach zauważyłem że ta struktura jest dosyć bliska optymalnej, ale ma bardziej złożoną logikę.
+
+Przerobienie starej struktury na optymalną było dosyć proste - głównie ograniczało się do uproszczenia ustalania indeksu 
+i oparcie logiki na dodatkowej fladze (oraz modyfikacji logiki procesów oczekujących)
+
+Przez tę modyfikację niektóre elementy logiki i komentarze mogą być nieaktualne, ponieważ wszystko było wcześniej przystosowane dla poprzedniej struktury.
+
+
+
+Dodatkowo istnieje szansa, że może być problem z endline'ami. Przed wysłaniem finalnej wersji potraktowałem cały folder dos2unix, ale nie mogę zagwarantować że endline'y poprawnie się przekonwertowały.
